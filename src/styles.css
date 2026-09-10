@@ -1,0 +1,166 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-navy: var(--navy);
+  --color-navy-ink: var(--navy-ink);
+  --color-navy-mist: var(--navy-mist);
+  --color-navy-veil: var(--navy-veil);
+  --color-gold: var(--gold);
+  --color-burgundy: var(--burgundy);
+  --color-paper: var(--paper);
+  --color-gray-muted: var(--gray-muted);
+  --font-display: "Fraunces", ui-serif, Georgia, serif;
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --shadow-lift: 0 1px 2px oklch(0.22 0.06 258 / 6%), 0 18px 44px -24px oklch(0.22 0.06 258 / 22%);
+  --shadow-glass: 0 10px 34px -18px oklch(0.22 0.06 258 / 30%);
+}
+
+:root {
+  --radius: 0.5rem;
+
+  /* Brand palette */
+  --navy: oklch(0.238 0.055 258.6); /* #061D38 */
+  --navy-ink: oklch(0.256 0.05 258.5); /* #0D2038 */
+  --navy-mist: oklch(0.968 0.008 258); /* very light navy tint - page bg */
+  --navy-veil: oklch(0.938 0.014 258); /* slightly deeper light navy */
+  --gold: oklch(0.688 0.104 68.5); /* #C98B38 */
+  --burgundy: oklch(0.451 0.164 22.8); /* #A5232B */
+  --paper: oklch(0.988 0.003 85); /* #FBFAF8 */
+  --gray-muted: oklch(0.512 0.017 261); /* #5F6874 */
+
+  --background: var(--navy-mist);
+  --foreground: var(--navy);
+  --card: oklch(0.995 0.002 258);
+  --card-foreground: var(--navy);
+  --popover: var(--paper);
+  --popover-foreground: var(--navy);
+  --primary: var(--navy);
+  --primary-foreground: var(--paper);
+  --secondary: var(--navy-veil);
+  --secondary-foreground: var(--navy);
+  --muted: var(--navy-veil);
+  --muted-foreground: var(--gray-muted);
+  --accent: var(--gold);
+  --accent-foreground: var(--navy);
+  --destructive: var(--burgundy);
+  --destructive-foreground: var(--paper);
+  --border: oklch(0.895 0.012 258);
+  --input: oklch(0.895 0.012 258);
+  --ring: var(--gold);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    letter-spacing: 0;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--burgundy);
+    outline-offset: 3px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      scroll-behavior: auto !important;
+      transition-duration: 0.01ms !important;
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+    }
+  }
+}
+
+@utility eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gray-muted);
+}
+
+@utility glass-bar {
+  background: color-mix(in oklab, var(--paper) 72%, transparent);
+  backdrop-filter: blur(18px) saturate(160%);
+  box-shadow: var(--shadow-glass);
+  border: 1px solid color-mix(in oklab, var(--navy) 8%, transparent);
+}
+
+@utility hairline {
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    color-mix(in oklab, var(--navy) 16%, transparent),
+    transparent
+  );
+}
+
+@utility rail {
+  margin-inline: auto;
+  width: 100%;
+  max-width: 78rem;
+  padding-inline: 1.25rem;
+  @media (min-width: 40rem) {
+    padding-inline: 1.5rem;
+  }
+}
+
+@utility no-scrollbar {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

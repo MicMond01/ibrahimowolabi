@@ -9,12 +9,36 @@ import workshop from "@/assets/speaking.jpeg";
 import award from "@/assets/speaking2.jpeg";
 
 const slides = [
-  { image: keynote, kind: "Keynote", title: "Leadership & Stewardship Summit", place: "Minneapolis" },
-  { image: tv, kind: "Broadcast", title: "Harnessing the transformative power of young Nigerians", place: "Studio conversation" },
-  { image: panel, kind: "Panel", title: "Governance and institutional accountability", place: "Moderated panel" },
-  { image: tv2, kind: "Broadcast", title: "Television interview on civic participation", place: "Studio conversation" },
-  { image: workshop, kind: "Workshop", title: "Leadership education for young professionals", place: "Seminar series" },
-  { image: award, kind: "Recognition", title: "Service and community advocacy honour", place: "Annual ceremony" },
+  {
+    image: keynote,
+    kind: "Keynote",
+    title: "Leadership & Stewardship ",
+    place: "Moderated panel | Saint Paul, Minnesota",
+  },
+  {
+    image: tv,
+    kind: "Broadcast",
+    title: "Harnessing the transformative power of young Nigerians",
+    place: "Studio conversation | Lagos, Nigeria",
+  },
+  {
+    image: panel,
+    kind: "Panel",
+    title: "Governance and institutional accountability",
+    place: "Convening | Lagos, Nigeria ",
+  },
+  {
+    image: tv2,
+    kind: "Broadcast",
+    title: "Youth development and civic participation",
+    place: "Studio conversation | Lagos, Nigeria",
+  },
+  {
+    image: workshop,
+    kind: "Workshop",
+    title: "Leadership education for young professionals",
+    place: "Seminar series | Plymouth, Minnesota",
+  },
 ];
 
 export function StageAndMedia() {
@@ -39,9 +63,8 @@ export function StageAndMedia() {
     <section id="stage" className="scroll-mt-24 py-16 md:py-28 bg-secondary/60">
       <div className="rail grid grid-cols-[minmax(0,1fr)_auto] items-end gap-4 md:flex md:justify-between md:gap-6">
         <div>
-          <p className="eyebrow">Stage & broadcast</p>
           <h2 className="mt-4 max-w-xl text-3xl leading-tight text-navy md:text-[2.6rem]">
-            Speaking, convening, and public presence.
+            Stage and Broadcast
           </h2>
         </div>
         <div className="flex shrink-0 items-center gap-2 sm:gap-3">

@@ -35,6 +35,7 @@
   --color-navy-ink: var(--navy-ink);
   --color-navy-mist: var(--navy-mist);
   --color-navy-veil: var(--navy-veil);
+  --color-navy-shade: var(--navy-shade);
   --color-gold: var(--gold);
   --color-burgundy: var(--burgundy);
   --color-paper: var(--paper);
@@ -53,6 +54,7 @@
   --navy-ink: oklch(0.256 0.05 258.5); /* #0D2038 */
   --navy-mist: oklch(0.968 0.008 258); /* very light navy tint - page bg */
   --navy-veil: oklch(0.938 0.014 258); /* slightly deeper light navy */
+  --navy-shade: oklch(0.912 0.016 258); /* one step deeper - Ideas feature band */
   --gold: oklch(0.688 0.104 68.5); /* #C98B38 */
   --burgundy: oklch(0.451 0.164 22.8); /* #A5232B */
   --paper: oklch(0.988 0.003 85); /* #FBFAF8 */

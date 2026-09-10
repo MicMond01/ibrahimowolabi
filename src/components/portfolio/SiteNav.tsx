@@ -8,7 +8,7 @@ const links = [
   { label: "About", href: "#about" },
   { label: "Work", href: "#work" },
   { label: "Public Leadership", href: "#leadership" },
-  { label: "Speaking & Media", href: "#stage" },
+  { label: "Stage & Broadcast", href: "#stage" },
   { label: "Ideas", href: "#ideas" },
   { label: "Contact", href: "#contact" },
 ];
@@ -66,7 +66,9 @@ export function SiteNav() {
             className="relative mx-auto w-full max-w-md object-contain"
           />
             </span>
-            <span className={`truncate font-display text-base leading-none text-navy sm:text-lg ${scrolled ? "md:hidden xl:inline" : ""}`}>
+            <span
+              className={`truncate font-display text-2xl leading-none text-navy sm:text-lg ${scrolled ? "md:hidden xl:inline" : ""}`}
+            >
               Ibrahim Owolabi
             </span>
           </a>

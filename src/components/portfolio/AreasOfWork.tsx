@@ -9,12 +9,12 @@ const areas = [
   {
     icon: Landmark,
     title: "Governance & Public Leadership",
-    body: "Governance oversight, institutional accountability, civic participation, and equitable public decision-making.",
+    body: "Governance oversight, institutional accountability, civic participation, and inclusive public decision-making.",
   },
   {
     icon: Scale,
     title: "Mediation & Leadership Education",
-    body: "Community and court-annexed mediation, conflict resolution, leadership communication, judgment, and stewardship.",
+    body: "Community and court-annexed mediation, conflict resolution, leadership communication, and stewardship.",
   },
 ];
 
@@ -23,7 +23,7 @@ export function AreasOfWork() {
     <section id="work" className="rail scroll-mt-28 py-16 md:py-28">
       <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
         <div>
-          <p className="eyebrow">Area of work</p>
+          <p className="eyebrow">Areas of work</p>
           <h2 className="mt-4 max-w-xl text-3xl leading-tight text-navy md:text-[2.6rem]">
             A practice grounded in stewardship.
           </h2>

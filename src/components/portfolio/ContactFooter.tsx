@@ -28,9 +28,11 @@ export function ContactFooter() {
               <Mail className="size-4 text-gold" />
               <span className="text-muted-foreground">Professional email address</span>
             </li>
-            <li className="flex items-center gap-3 text-navy">
+            <li className=" text-navy cursor-pointer">
+              <a className="flex items-center gap-3" href="https://linkedin.com/in/ibrahimowolab/" target="_blank">
               <Linkedin className="size-4 text-gold" />
               <span className="text-muted-foreground">LinkedIn profile</span>
+              </a>
             </li>
             <li className="flex items-center gap-3 text-navy">
               <MapPin className="size-4 text-gold" />
@@ -69,7 +71,12 @@ export function ContactFooter() {
           </div>
           <label className="mt-7 block">
             <span className="eyebrow">Subject</span>
-            <input required name="subject" placeholder="Reason for reaching out" className={fieldClass} />
+            <input
+              required
+              name="subject"
+              placeholder="Reason for reaching out"
+              className={fieldClass}
+            />
           </label>
           <label className="mt-7 block">
             <span className="eyebrow">How can I help?</span>
@@ -97,9 +104,9 @@ export function ContactFooter() {
           <p className="font-display text-lg tracking-tight flex gap-2">   <span className="grid size-10 place-items-center ">
               <img
                 src={logo}
-            alt="logo of Ibrahim Owolabi"
-            className="relative mx-auto w-full max-w-md object-contain"
-          />
+                alt="logo of Ibrahim Owolabi"
+                className="relative mx-auto w-full max-w-md object-contain"
+              />
             </span>{" "}
             Ibrahim Owolabi
           </p>
@@ -107,7 +114,7 @@ export function ContactFooter() {
             Leadership · Governance · Service
           </p>
           <p className="text-[0.68rem] uppercase tracking-[0.2em] text-paper/40">
-            Minneapolis, Minnesota
+            Minneapolis, Minnesota | Lagos, Nigeria
           </p>
         </div>
       </footer>

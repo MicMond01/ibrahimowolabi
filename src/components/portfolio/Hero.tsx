@@ -13,7 +13,7 @@ export function Hero() {
           <p className="eyebrow inline-block text-[#A5232B]">
             Leadership · Governance · Service
           </p>
-          <h1 className="mt-6 text-[2.35rem] leading-[1.28] text-navy sm:mt-8 sm:text-[3.4rem] lg:text-[3.5rem]">
+          <h1 className="mt-6 text-[2rem] leading-[1.28] text-navy sm:mt-8 sm:text-[3.4rem] lg:text-[3.5rem]">
             Strengthening people.
             <br />
             Building institutions.
@@ -21,8 +21,8 @@ export function Hero() {
             Serving communities.
           </h1>
           <p className="mt-7 max-w-lg text-[0.95rem] leading-relaxed text-muted-foreground">
-            I am Ibrahim Owolabi, an HR leader, governance steward, mediator, leadership educator,
-            and community advocate working across people and institutions.
+            I am Ibrahim Owolabi, an HR leader, governance steward,leadership educator, community
+            advocate and mediator working across people and institutions.
           </p>
           <div className="mt-8 flex flex-col items-start gap-5 sm:mt-10 sm:flex-row sm:items-center sm:gap-4">
             <a
@@ -32,13 +32,13 @@ export function Hero() {
               Explore my work
               <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
             </a>
-            <a
+            {/* <a
               href="#ideas"
               className="group inline-flex items-center gap-2 border-b border-transparent pb-1 text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-navy transition-colors hover:border-gold"
             >
               <BookOpen className="size-4 text-gold" />
-              Read my writing
-            </a>
+              Writing
+            </a> */}
           </div>
         </div>
 

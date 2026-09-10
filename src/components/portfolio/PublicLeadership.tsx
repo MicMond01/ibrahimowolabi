@@ -6,17 +6,19 @@ const appointments = [
     role: "Chair",
     institution: "Hennepin County Human Resources Board",
     image: board,
-    appointment: "Current appointment",
+    appointment: " | 2026-2027",
   },
   {
     role: "Member-at-Large",
     institution: "Metropolitan Council Equity Advisory Committee",
     image: council,
+    appointment: " | 2026-2030",
   },
   {
     role: "Member-at-Large",
     institution: "Hennepin County Race Equity Advisory Council",
     image: board,
+    appointment: " | 2026-2028",
   },
 ];
 

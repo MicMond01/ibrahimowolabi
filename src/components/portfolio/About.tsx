@@ -8,13 +8,13 @@ const intro =
 
 const narrative = [
   "His human resources experience spans government, nonprofit, behavioral health, financial services, and international development organizations. He also serves as Chair of the Hennepin County Human Resources Board and as a Member-at-Large of the Metropolitan Council Equity Advisory Committee and the Hennepin County Race Equity Advisory Council.",
-  "In 2017, he co-founded Involve Africa, which supports young people’s participation in governance, civic life, community development, and peacebuilding. He is also the Founder and Executive Director of the Pan-African Development Center, a Minnesota-based nonprofit that helps African-diaspora and Black communities prepare for the workforce, develop leaders, understand public institutions, and participate in civic life.",
+  "In 2017, he co-founded Involve Africa, which supports young people’s participation in governance, civic engagement, community development, and peacebuilding. He is also the Founder and Executive Director of the Pan-African Development Center, a Minnesota-based nonprofit that helps African-diaspora and Black communities prepare for the workforce, develop leaders, understand public institutions, and participate in civic life.",
   "An experienced community and court-annexed mediator, Ibrahim is listed on the Minnesota Rule 114 Qualified Neutral Roster. He is also the author of The Leadership Intelligence Framework: A Model of Cognitive, Social, and Moral Leadership.",
 ];
 
 const education = [
   { school: "Georgetown University", detail: "Master’s degree, Human Resources Management" },
-  { school: "Lagos State University", detail: "Bachelor’s degree, Banking & Finance" },
+  { school: "Lagos State University", detail: "Bachelor’s degree, Banking and Finance" },
 ];
 
 const credentials = ["GPHR", "MCIPD", "CPHR", "MCIPM", "Distinguished Toastmaster"];

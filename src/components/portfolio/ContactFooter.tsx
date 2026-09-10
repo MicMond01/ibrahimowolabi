@@ -18,10 +18,6 @@ export function ContactFooter() {
           <h2 className="mt-4 text-3xl leading-tight text-navy md:text-[2.6rem]">
             Let&apos;s connect.
           </h2>
-          <p className="mt-6 max-w-sm text-[0.95rem] leading-relaxed text-muted-foreground">
-            I welcome thoughtful inquiries concerning professional leadership, governance,
-            mediation, speaking, writing, and media.
-          </p>
 
           <ul className="mt-8 space-y-4 text-[0.9rem] sm:mt-10">
             <li className="flex items-center gap-3 text-navy">
@@ -36,7 +32,7 @@ export function ContactFooter() {
             </li>
             <li className="flex items-center gap-3 text-navy">
               <MapPin className="size-4 text-gold" />
-              <span className="text-muted-foreground">Minneapolis, Minnesota</span>
+              <span className="text-muted-foreground">Minneapolis, Minnesota | Lagos, Nigeria</span>
             </li>
           </ul>
         </div>

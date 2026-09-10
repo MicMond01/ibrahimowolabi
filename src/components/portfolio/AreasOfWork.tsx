@@ -41,7 +41,6 @@ export function AreasOfWork() {
               <span className="grid size-11 place-items-center rounded-full bg-secondary text-navy transition-all duration-500 group-hover:rotate-3 group-hover:bg-burgundy group-hover:text-paper">
                 <Icon className="size-5" strokeWidth={1.5} />
               </span>
-              <span className="font-display text-sm text-muted-foreground">0{i + 1}</span>
             </div>
             <h3 className="mt-8 text-xl leading-snug text-navy">{title}</h3>
             <p className="mt-4 text-[0.88rem] leading-relaxed text-muted-foreground">{body}</p>

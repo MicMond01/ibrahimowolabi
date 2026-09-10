@@ -88,7 +88,7 @@ export function SiteNav() {
           </ul>
 
           <a
-            href="mailto:ibrahimowolabi@example.com"
+            href="mailto:ibrahim@ibrahimowolabi.com"
             className={`group shrink-0 items-center gap-1.5 rounded-full bg-navy px-4 py-2 text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-paper transition-colors hover:bg-navy-ink ${
                scrolled ? "absolute right-5 hidden lg:inline-flex" : "hidden md:inline-flex"
             }`}

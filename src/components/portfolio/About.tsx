@@ -20,7 +20,7 @@ const education = [
 const credentials = ["GPHR", "MCIPD", "CPHR", "MCIPM", "Distinguished Toastmaster"];
 
 const conviction =
-  "Leadership is a responsibility to care for people, strengthen institutions, and use entrusted opportunities with integrity.";
+  "Leadership is a responsibility to care for people, strengthen institutions, and steward entrusted opportunities with integrity.";
 
 // Enter transition for revealed blocks: fade + rise, with an optional stagger.
 const enter = (hidden: boolean, delay = 0, y = 24): CSSProperties => ({

@@ -22,7 +22,7 @@ export function ContactFooter() {
           <ul className="mt-8 space-y-4 text-[0.9rem] sm:mt-10">
             <li className="flex items-center gap-3 text-navy">
               <Mail className="size-4 text-gold" />
-              <span className="text-muted-foreground">Professional email address</span>
+              <span className="text-muted-foreground">Ibrahim@ibrahimowolabi.com</span>
             </li>
             <li className=" text-navy cursor-pointer">
               <a className="flex items-center gap-3" href="https://linkedin.com/in/ibrahimowolab/" target="_blank">

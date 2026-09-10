@@ -21,7 +21,7 @@ export function Hero() {
             Serving communities.
           </h1>
           <p className="mt-7 max-w-lg text-[0.95rem] leading-relaxed text-muted-foreground">
-            I am Ibrahim Owolabi, an HR leader, governance steward,leadership educator, community
+            I am Ibrahim Owolabi, an HR leader, governance steward, leadership educator, community
             advocate and mediator working across people and institutions.
           </p>
           <div className="mt-8 flex flex-col items-start gap-5 sm:mt-10 sm:flex-row sm:items-center sm:gap-4">

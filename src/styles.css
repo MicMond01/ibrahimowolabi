@@ -166,3 +166,71 @@
     display: none;
   }
 }
+
+/* Stage & Broadcast — YouTube playlist play affordance.
+   `media-play-ring` is the expanding pulse behind the button (two elements,
+   offset by an animation-delay). `media-play-pulse` is a single utility that
+   runs the breathing gold glow AND the short periodic shake together — they
+   have to share one `animation` declaration because the shorthand would
+   otherwise clobber itself across two classes. They animate disjoint
+   properties (box-shadow vs. transform), so both run cleanly. */
+@utility media-play-ring {
+  animation: media-play-ring 3.6s cubic-bezier(0.22, 0.61, 0.36, 1) infinite;
+}
+
+@utility media-play-pulse {
+  animation:
+    media-play-glow 3.6s ease-in-out infinite,
+    media-play-shake 3.6s ease-in-out infinite;
+}
+
+@keyframes media-play-ring {
+  0% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  70%,
+  100% {
+    transform: scale(2.4);
+    opacity: 0;
+  }
+}
+
+@keyframes media-play-glow {
+  0%,
+  100% {
+    box-shadow:
+      0 0 0 0 color-mix(in oklab, var(--gold) 65%, transparent),
+      0 0 26px -2px color-mix(in oklab, var(--paper) 45%, transparent);
+  }
+  55% {
+    box-shadow:
+      0 0 0 12px color-mix(in oklab, var(--gold) 0%, transparent),
+      0 0 34px -2px color-mix(in oklab, var(--gold) 50%, transparent);
+  }
+}
+
+/* A brief nudge rather than a constant jitter: quiet for most of the cycle,
+   then a quick shake so the eye catches it. */
+@keyframes media-play-shake {
+  0%,
+  58%,
+  100% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+  62% {
+    transform: translate3d(-1.5px, 0, 0) rotate(-2.5deg);
+  }
+  66% {
+    transform: translate3d(1.5px, 0, 0) rotate(2.5deg);
+  }
+  70% {
+    transform: translate3d(-1px, 0, 0) rotate(-1.5deg);
+  }
+  74% {
+    transform: translate3d(1px, 0, 0) rotate(1.5deg);
+  }
+  78% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+}

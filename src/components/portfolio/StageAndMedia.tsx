@@ -1,6 +1,7 @@
 import { useCallback, useRef, useState } from "react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { PlaylistEmbed } from "@/components/portfolio/PlaylistEmbed";
 import keynote from "@/assets/speaking3.jpeg";
 import tv from "@/assets/tvcTransformativePower.png";
 import tv2 from "@/assets/tvcInvolveAfrica.png";
@@ -12,7 +13,7 @@ const slides = [
   {
     image: keynote,
     kind: "Keynote",
-    title: "Leadership & Stewardship ",
+    title: "Leadership & Service",
     place: "Moderated panel | Saint Paul, Minnesota",
   },
   {
@@ -126,6 +127,11 @@ export function StageAndMedia() {
         </div>
       </div>
 
+      {/* The interviews playlist sits under the slides rather than as a sixth
+          card, so visitors can watch on the page without leaving the slider. */}
+      <div className="rail">
+        <PlaylistEmbed />
+      </div>
     </section>
   );
 }

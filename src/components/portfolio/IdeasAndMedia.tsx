@@ -23,6 +23,13 @@ const pieces = [
     meta: "Essay",
      link: "https://medium.com/@ibrahimowolabiodunayo/obama-a-contemporary-mosaic-of-hope-in-america-today-3ce702f01ba9",
   },
+  {
+    tag: "Essay",
+    title: "The Stewardship Question",
+    body: "Stewardship as accountable care for what we inherit — and how it differs from leadership, ownership, and preservation.",
+    meta: "Essay",
+    link: "https://medium.com/@ibrahimowolabiodunayo/the-stewardship-question-ad66cf0bf9fa",
+  },
 ];
 
 export function IdeasAndMedia() {
@@ -89,7 +96,9 @@ export function IdeasAndMedia() {
           <span className="mt-6 block h-0.5 w-14 rounded-full bg-gradient-to-r from-burgundy to-gold" />
         </div>
 
-        <div className="mt-10 grid gap-4 sm:mt-14 sm:gap-5 md:grid-cols-3">
+        {/* two-up from md: four pieces balance as a 2×2, where three columns
+            would strand the fourth on a row of its own */}
+        <div className="mt-10 grid gap-4 sm:mt-14 sm:gap-5 md:grid-cols-2">
           {pieces.map((p, i) => (
             <div
               key={p.title}

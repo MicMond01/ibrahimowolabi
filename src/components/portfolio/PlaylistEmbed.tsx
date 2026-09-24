@@ -1,32 +1,35 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { ArrowUpRight, Play, VolumeX } from "lucide-react";
+import posterImg from "@/assets/thumnail - Copy.jpeg";
 
 /**
  * The public playlist this block plays:
  * "Ibrahim Owolabi | Interviews and Media Appearances."
  *
- * Nothing is requested from YouTube until the block scrolls into view, so the
- * embed costs the initial page load nothing. Playback then starts on its own —
- * muted, because every browser blocks autoplay with sound. The "tap for sound"
- * pill drives the player over postMessage (hence `enablejsapi=1`); the player's
- * own controls stay available as well.
+ * It opens on the TVC News interview and then rolls on through the rest of the
+ * playlist. Nothing is requested from YouTube until the block scrolls into view,
+ * so the embed costs the initial page load nothing. Playback then starts on its
+ * own — muted, because every browser blocks autoplay with sound. The "tap for
+ * sound" pill drives the player over postMessage (hence `enablejsapi=1`); the
+ * player's own controls stay available as well.
  *
  * Visitors with reduced motion are never autoplayed at — they get the poster and
  * the (un-animated) play button, and playback starts on click instead.
  */
 const PLAYLIST_ID = "PLQ4ui_CkOJTQ";
-/** First video in the playlist — its thumbnail stands in as the poster. */
-const POSTER_VIDEO_ID = "xfCRME9bknI";
+/** The video the player opens on — drawn from the playlist above. */
+const VIDEO_ID = "EBmv8wpnQ8w";
+/** Skip the title card: playback begins at 00:17. */
+const START_SECONDS = 17;
 
 const PLAYLIST_URL = `https://www.youtube.com/playlist?list=${PLAYLIST_ID}`;
-const POSTER_URL = `https://i.ytimg.com/vi/${POSTER_VIDEO_ID}/maxresdefault.jpg`;
-const POSTER_FALLBACK_URL = `https://i.ytimg.com/vi/${POSTER_VIDEO_ID}/hqdefault.jpg`;
 
 type Mode = "idle" | "auto" | "click";
 
 function embedUrl(muted: boolean, origin: string) {
   const params = new URLSearchParams({
     list: PLAYLIST_ID,
+    start: String(START_SECONDS),
     autoplay: "1",
     mute: muted ? "1" : "0",
     rel: "0",
@@ -34,7 +37,7 @@ function embedUrl(muted: boolean, origin: string) {
     enablejsapi: "1",
   });
   if (origin) params.set("origin", origin);
-  return `https://www.youtube.com/embed/videoseries?${params.toString()}`;
+  return `https://www.youtube.com/embed/${VIDEO_ID}?${params.toString()}`;
 }
 
 export function PlaylistEmbed() {
@@ -43,7 +46,6 @@ export function PlaylistEmbed() {
   const [mode, setMode] = useState<Mode>("idle");
   const [ready, setReady] = useState(false);
   const [muted, setMuted] = useState(true);
-  const [posterSrc, setPosterSrc] = useState<string | null>(POSTER_URL);
   const [origin, setOrigin] = useState("");
 
   useEffect(() => {
@@ -118,20 +120,13 @@ export function PlaylistEmbed() {
             ready ? "opacity-0" : "opacity-100"
           }`}
         >
-          {posterSrc && (
-            <img
-              src={posterSrc}
-              // maxres isn't available for every video — step down once, then
-              // fall back to the flat navy ground already behind us.
-              onError={() =>
-                setPosterSrc((s) => (s === POSTER_URL ? POSTER_FALLBACK_URL : null))
-              }
-              alt=""
-              decoding="async"
-              loading="lazy"
-              className="size-full object-cover"
-            />
-          )}
+          <img
+            src={posterImg}
+            alt=""
+            decoding="async"
+            loading="lazy"
+            className="size-full object-cover"
+          />
           {/* the cover: a light black wash under a bottom-weighted gradient */}
           <span className="absolute inset-0 bg-black/25" />
           <span className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />

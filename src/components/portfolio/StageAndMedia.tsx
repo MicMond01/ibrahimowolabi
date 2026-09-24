@@ -13,7 +13,7 @@ const slides = [
   {
     image: keynote,
     kind: "Keynote",
-    title: "Leadership & Service",
+    title: "Leadership and Service",
     place: "Moderated panel | Saint Paul, Minnesota",
   },
   {

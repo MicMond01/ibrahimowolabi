@@ -30,6 +30,13 @@ const pieces = [
     meta: "Essay",
     link: "https://medium.com/@ibrahimowolabiodunayo/the-stewardship-question-ad66cf0bf9fa",
   },
+  {
+    tag: "Essay",
+    title: "Guaranteeing Basic Education: A Pathway to Realizing Africa’s Future",
+    body: "The case for guaranteeing basic education across Africa — and why that guarantee is the pathway to the continent’s future.",
+    meta: "Essay",
+    link: "https://medium.com/@ibrahimowolabiodunayo/guaranteeing-basic-education-a-pathway-to-realizing-africas-future-ccd3277a24aa",
+  },
 ];
 
 export function IdeasAndMedia() {
@@ -96,9 +103,10 @@ export function IdeasAndMedia() {
           <span className="mt-6 block h-0.5 w-14 rounded-full bg-gradient-to-r from-burgundy to-gold" />
         </div>
 
-        {/* two-up from md: four pieces balance as a 2×2, where three columns
-            would strand the fourth on a row of its own */}
-        <div className="mt-10 grid gap-4 sm:mt-14 sm:gap-5 md:grid-cols-2">
+        {/* two-up on tablet, three-up once there is room: five pieces land as
+            3 + 2 on desktop, where a strict two-column grid would strand the
+            fifth on a row of its own */}
+        <div className="mt-10 grid gap-4 sm:mt-14 sm:gap-5 md:grid-cols-2 lg:grid-cols-3">
           {pieces.map((p, i) => (
             <div
               key={p.title}
